@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employe Database Management</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Employee Database Management</h1>
+      <button class="createEmployee">Add Employee</button>
+    </header>
+
+    <div class="employees">
+      <div class="employees__names">
+        <span class="employees__names--title">Employee List</span>
+        <div class="employees__names--list"></div>
+      </div>
+
+      <div class="employees__single">
+        <span class="employees__single--title">Employee Information</span>
+        <div class="employees__single--info"></div>
+      </div>
+    </div>
+    
+    <!-- Add Employee Code - START -->
+    <div class="addEmployee">
+      <form class="addEmployee__create">
+        Add a new Employee
+        <div>
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input type="text" name="lastName" placeholder="Last Name" required />
+        </div>
+        <input type="text" name="imageUrl" placeholder="Image URL (Optional)" />
+        <input type="email" name="email" placeholder="Email" required />
+        <input
+          type="number"
+          name="contactNumber"
+          placeholder="Contact"
+          required
+        />
+        <input type="number" name="salary" placeholder="Salary" required />
+        <input type="text" name="address" placeholder="Address" required />
+        <input
+          type="date"
+          name="dob"
+          placeholder="Date of Birth"
+          class="addEmployee_create--dob"
+          required
+        />
+        <input
+          type="submit"
+          class="addEmployee__create--submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
