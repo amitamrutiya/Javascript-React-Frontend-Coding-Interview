@@ -1,3 +1,5 @@
+import { useRef } from "react";
+
 class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -27,7 +29,7 @@ class LRUCache {
   }
 
   addToFront(key, value) {
-    const newNode = {key, value, next: null};
+    const newNode = { key, value, next: null };
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
@@ -85,3 +87,14 @@ class LRUCache {
   }
 }
 
+const useLRUCache = (capacity) => {
+  const cacheRef = useRef(new LRUCache(capacity));
+  console.log(cacheRef.current);
+
+  const get = (key) => cacheRef.current.get(key);
+  const put = (key, value) => cacheRef.current.put(key, value);
+
+  return { get, put };
+};
+
+export default useLRUCache;
