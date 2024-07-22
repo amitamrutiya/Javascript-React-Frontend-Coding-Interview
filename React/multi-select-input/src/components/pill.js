@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 const Pill = ({ image, text, onClick }) => {
   return (
     <span className="user-pill" onClick={onClick}>

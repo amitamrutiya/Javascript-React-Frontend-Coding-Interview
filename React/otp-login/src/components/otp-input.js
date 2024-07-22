@@ -1,8 +1,6 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 
 const OtpInput = ({ length = 4, onOtpSubmit = () => {} }) => {
-
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const inputRefs = useRef([]);
 
@@ -20,7 +18,7 @@ const OtpInput = ({ length = 4, onOtpSubmit = () => {} }) => {
     // allow only one input
     newOtp[index] = value.substring(value.length - 1);
     setOtp(newOtp);
-    
+
     // submit trigger
     const combinedOtp = newOtp.join("");
     if (combinedOtp.length === length) onOtpSubmit(combinedOtp);
