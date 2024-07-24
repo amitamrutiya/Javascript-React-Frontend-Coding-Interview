@@ -1,0 +1,38 @@
+.drag-and-drop-list {
+  width: 400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.list-item {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.list-item:active {
+  cursor: grabbing;
+}
+.form {
+  margin-bottom: 20px;
+}
+input {
+  margin-bottom: 2px;
+  height: 20px;
+  padding: 8px;
+  font-size: 18px;
+}
+button {
+  background-color: rgb(89, 89, 160);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  border: none;
+  outline: none;
+  margin-left: 12px;
+  cursor: pointer;
+}
