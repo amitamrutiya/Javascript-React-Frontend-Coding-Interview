@@ -1,0 +1,28 @@
+.accordion {
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-item {
+  border-top: 1px solid #ccc;
+}
+
+.accordion-item:first-child {
+  border-top: none;
+}
+
+.accordion-header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-content {
+  padding: 10px;
+  background-color: #fff;
+}
