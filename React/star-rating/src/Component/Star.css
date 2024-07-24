@@ -1,0 +1,9 @@
+.star-rating {
+  display: flex;
+  gap: 6px;
+}
+
+.star {
+  cursor: pointer;
+  transition: fill 200ms;
+}
