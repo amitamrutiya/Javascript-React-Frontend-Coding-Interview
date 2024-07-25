@@ -1,0 +1,125 @@
+.container-top,
+.container-bottom {
+  position: fixed;
+}
+
+.container-top {
+  padding-top: 20px;
+}
+
+.container-bottom {
+  padding-bottom: 20px;
+}
+
+.toast {
+  position: relative;
+
+  cursor: pointer;
+  width: 300px;
+  padding: 15px 35px;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, top 0.2s, visibility 0.2s;
+}
+
+.toast--visible {
+  opacity: 1;
+  visibility: visible;
+
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+
+  transition: margin-top 1s;
+}
+
+.toast--visible:first-child {
+  margin-top: -20px !important;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.toast--success {
+  /* background: #05d733; */
+  background-color: #00b712;
+  background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
+  color: #ffffff;
+}
+
+.toast--error {
+  background-image: linear-gradient(315deg, #7a1212 0%, #ff0000 74%);
+  color: #ffffff;
+}
+
+.cross {
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #044ddc;
+  background-image: linear-gradient(274deg, #2280f4ab 0%, #1870c1 74%);
+  padding: 4px 5px 3px 5px;
+  box-shadow: rgb(0 0 0 / 76%) 0px 2px 4px;
+  text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.time-remaining {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  cursor: pointer;
+  padding: 2px 5px;
+  width: 12%;
+
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+
+  background-color: #044ddc;
+  background-image: linear-gradient(274deg, #2280f4ab 0%, #1870c1 74%);
+}
