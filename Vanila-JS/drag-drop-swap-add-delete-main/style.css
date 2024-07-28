@@ -1,0 +1,99 @@
+body {
+  background: #000;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gridContainer {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: auto auto auto;
+  gap: 2px;
+  border-radius: 10px;
+}
+
+.fill {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.hold {
+  border: 5px solid #ccc;
+}
+
+.empty {
+  position: relative;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 2px;
+  border: solid 0px salmon;
+  background: radial-gradient(#5ac9f9, #4e54ff6b);
+}
+
+.addIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #ffffff;
+  font-size: 80px;
+  height: 100%;
+  width: 100%;
+  font-weight: 400;
+}
+
+.file {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.delete {
+  display: none;
+}
+
+.fill:hover .delete {
+  display: block;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background-color: red;
+  top: -15px;
+  right: -15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.hovered {
+  background: red;
+}
