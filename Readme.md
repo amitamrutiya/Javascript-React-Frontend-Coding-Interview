@@ -4,6 +4,8 @@
 - DSA: Data Structure and Algorithm
 - Vanila Javascript
 - React
+- Interview Questions and Answers
+- Output based Questions
 
 ### DSA: Data Structure and Algorithm
 - Array
@@ -15,19 +17,15 @@
 - Graph
 - Hash
 - Heap
+- Sorting
+- Star Pattern
 - General Problem Solving Techniques
 
 ### Vanila Javascript
-- Count Down Timer
-- Employee Database Management
+- All Javascript Projects
 
 ### React
-- EMI Calculator
-- File Explorer
-- Grid Ligths
-- Pagination
-- Password Generator
-- Progress Bar
+- All React Projects
 
 ### Contributions are welcome! 🎉
 
