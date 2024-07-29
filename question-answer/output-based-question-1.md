@@ -14,8 +14,6 @@ console.log(arr);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **2. What will be the output**
 ```js
 x = 10;
@@ -29,8 +27,6 @@ var x;
 	<li><b>Reason</b> : The declaration of the variable x is hoisted to the top of its scope.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **3. What will be the output**
 ```js
@@ -48,8 +44,6 @@ console.log(b);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **4. What will be the output**
 ```js
 for(var i = 0; i < 10; i++){
@@ -66,8 +60,6 @@ for(var i = 0; i < 10; i++){
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **5. What will be the output**
 ```js
 for(let i = 0; i < 10; i++){
@@ -83,8 +75,6 @@ for(let i = 0; i < 10; i++){
 	<li><b>Reason</b> : "let" has a block scope, and a new binding will be created for each iteration. Here, a new variable i is created and has a different value for each iteration of the loop.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **6. What will be the output**
 ```js
@@ -105,8 +95,6 @@ hello();
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **7. What will be the output**
 ```js
 let f = "8";
@@ -120,8 +108,6 @@ console.log((+f)+a+1);
 	<li><b>Reason</b> : The expression (+f) is a shorthand way to convert the string value of f to a number. Therefore, (+f) evaluates to 8.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **8. What will be the output**
 ```js
@@ -140,8 +126,6 @@ console.log(a, "outside");
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **9. What will be the output**
 ```js
 var a = "xyz";
@@ -155,8 +139,6 @@ console.log(a)
 	<li><b>Reason</b> : Both the variables are declared using "var" keyword with the same name "a". The second variable declaration will override the first variable declaration.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **10. What will be the output**
 ```js
@@ -173,8 +155,6 @@ console.log(result);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **11. What will be the output**
 ```js
 const person1 = { name: 'xyz', age: 21 };
@@ -189,8 +169,6 @@ console.log(person2);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **12. What will be the output**
 ```js
 console.log(5 < 6 < 7);
@@ -203,8 +181,6 @@ console.log(5 < 6 < 7);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **13. What will be the output**
 ```js
 console.log(7 > 6 > 5);
@@ -216,8 +192,6 @@ console.log(7 > 6 > 5);
 	<li><b>Reason</b> : In JavaScript, the > operator evaluates expressions from left to right. First, the expression 7 > 6 is evaluated, resulting in true because 7 is greater than 6. Then, the expression true > 5 is evaluated. In this case, JavaScript performs type coercion and converts true to the number 1. Therefore, the expression becomes 1 > 5, which is false.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **14. What will be the output**
 ```js
@@ -232,8 +206,6 @@ console.log(1 == true);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **15. What will be the output**
 ```js
 console.log([11, 2, 31] + [4, 5, 6]);
@@ -245,8 +217,6 @@ console.log([11, 2, 31] + [4, 5, 6]);
 	<li><b>Reason</b> : The + operator is used for both addition and string concatenation. When you try to concatenate two arrays using the + operator, the arrays are converted to strings and then concatenated together. In this case, the arrays [11, 2, 31] and [4, 5, 6] are converted to strings as "11,2,31" and "4,5,6" respectively. Then, the two strings are concatenated, resulting in "11,2,314,5,6".</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **16. What will be the output**
 ```js
@@ -260,8 +230,6 @@ console.log({} === {});
 	<li><b>Reason</b> : When you compare objects using == or ===, it checks if they refer to the exact same object. So even if they are looking same, they are pointing to different memory locations.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **17. What will be the output**
 ```js
@@ -278,8 +246,6 @@ console.log(x)
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **18. What will be the output**
 ```js
 let x = 5;
@@ -295,8 +261,6 @@ console.log(x)
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **19. What will be the output**
 ```js
 console.log('apple'.split(''));
@@ -308,8 +272,6 @@ console.log('apple'.split(''));
 	<li><b>Reason</b> : split method is used to split a string into an array of substrings based on a specified separator. </li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **20. What will be the output**
 ```js
@@ -323,8 +285,6 @@ console.log(arr.indexOf(5))
 	<li><b>Reason</b> : indexOf method returns the index of the first occurrence of the specified element in the array. </li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **21. What will be the output**
 ```js
@@ -340,8 +300,6 @@ console.log(result);
 	<li><b>Reason</b> : The code increments each element in the array by 2 using map and filters out elements greater than 25 using filter.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **22. What will be the output**
 ```js
@@ -359,8 +317,6 @@ checkValue([1,2,3]);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **23. What will be the output**
 ```js
 function sum(a=5, b=7){
@@ -376,8 +332,6 @@ console.log(sum(undefined, 20));
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **24. What will be the output**
 ```js
 console.log(10 + "5");
@@ -391,8 +345,6 @@ console.log("5" + 10);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **25. What will be the output**
 ```js
 console.log(10 - "5");
@@ -405,8 +357,6 @@ console.log("5" - 10);
 	<li><b>Reason</b> : In JavaScript, when the subtraction operator - is used, the operands are converted to numbers before performing the subtraction </li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **26. What will be the output**
 ```js
@@ -423,8 +373,6 @@ function printName(){
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 
 **27. What will be the output**
 ```js
@@ -440,8 +388,6 @@ const printName = () => {
 	<li><b>Reason</b> : Arrow functions cannot be accessed before they are initialised. </li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **28. What will be the output (shallow copy of an object)**
 ```js
@@ -475,8 +421,6 @@ console.log(cloneUserDetails.address.city);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **29. What will be the output**
 ```js
 function hello(){
@@ -495,8 +439,6 @@ hello();
 	<li><b>Reason for console.log(age)</b> : The variable age (declared with let) is also hoisted to the top of its scope, but unlike var, it is not initialized until the line where it is declared.</b></li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 
 **30. What will be the output**
@@ -517,8 +459,6 @@ console.log(arr1 == arr2);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **31. What will be the output**
 ```js
 const a = {x : 1};
@@ -535,8 +475,6 @@ console.log(a.x === b.x)
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **32. What will be the output**
 ```js
 const arr = [10, -1, 2];
@@ -551,8 +489,6 @@ console.log(arr);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **33. What will be the output**
 ```js
 const arr = [11, 0, '', false, 2, 1];
@@ -566,8 +502,6 @@ console.log(filtered);
 	<li><b>Reason</b> : filter(Boolean) removes all falsy values (0, "" (empty string), false, null, undefined, and NaN) from the array and keeps truthy ones.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **34. What will be the output**
 ```js
@@ -588,8 +522,6 @@ if(y){
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **35. What will be the output**
 ```js
 const obj = {
@@ -606,8 +538,6 @@ console.log(var1, var2);
 	<li><b>Reason</b> : Object destructuring extracts the values of var1 and var2 from obj object and prints them using console.log(var1, var2)</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **36. What will be the output**
 ```js
@@ -628,8 +558,6 @@ console.log(name);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **37. What will be the output**
 ```js
 const person = {
@@ -645,8 +573,6 @@ console.log(lastName);
 	<li><b>Reason</b> : The lastName property is not defined in the person object and the destructuring syntax provides a default value ("dighe") to be used when the property is missing.</li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **38. What will be the output**
 ```js
@@ -664,8 +590,6 @@ console.log(firstName);
 </ul>
 </details>
 
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
-
 **39. What will be the output**
 ```js
 var a = 10;
@@ -679,8 +603,6 @@ console.log(a)
 	<li><b>Reason</b> : In Javascript, we cannot redeclare a variable with let if it has already been declared in the same scope. </li>
 </ul>
 </details>
-
-**[:top: Scroll to Top](#javascript-output-based-interview-questions)**
 
 **40. What will be the output**
 ```js
