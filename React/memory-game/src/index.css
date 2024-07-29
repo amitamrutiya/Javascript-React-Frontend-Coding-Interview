@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App {
+  text-align: center;
+}
+.game{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.card{
+  height: 30px;
+  width: 30px;
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.show{
+  font-size: 30px;
+}
+.hide{
+  font-size: 0;
+}
+.remove{
+  visibility: hidden;
+}
+
+button{
+  width: 140px;
+  height: 40px;
+  background-color: purple;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 20px;
+
+}
