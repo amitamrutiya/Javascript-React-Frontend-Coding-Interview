@@ -83,7 +83,8 @@ function renderComponent() {
   if (!currentComponent) return;
 
   hookIndex = 0; // Reset hook index
-  const element = currentComponent.fn(currentComponent);
+  const element = currentComponent.fn();
+  console.log("Element to render:", element);
   const container = document.querySelector("#root");
   customRender(element, container);
 }
