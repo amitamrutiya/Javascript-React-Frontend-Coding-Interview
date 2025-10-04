@@ -1,69 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #548687;
+  text-align: center;
+}
+
 .container {
+  height: 70vh;
   display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vmin;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  font-size: 8vmin;
+  color: #b0413e;
+  background-color: #ffffc7;
+}
+
+#reset-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#new-btn {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#msg {
+  color: #ffffc7;
+  font-size: 5vmin;
+}
+
+.msg-container {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  gap: 4rem;
 }
 
-.game-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  column-gap: 10px;
-  row-gap: 10px;
-}
-
-.cell {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-.cell:nth-child(1),
-.cell:nth-child(3),
-.cell:nth-child(5),
-.cell:nth-child(7),
-.cell:nth-child(9) {
-  background-color: #c0dd11;
-}
-
-.cell:nth-child(2),
-.cell:nth-child(4),
-.cell:nth-child(6),
-.cell:nth-child(8) {
-  background-color: #73af1a;
-}
-
-.cell-withX::before {
-  content: "\2716";
-  font-size: 100px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cell-withO::before {
-  content: "O";
-  font-size: 100px;
-  color: white;
-  display: flex;  
-  justify-content: center;
-  align-items: center;
-}
-
-.reset {
-  margin-top: 20px;
-  font-size: 20px;
-  border: 0;
-  border-radius: 5px;
-  height: 30px;
-  background-color: #c0dd11;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.won {
-  margin-top: 20px;
-  font-size: 25px;
+.hide {
+  display: none;
 }

@@ -3,28 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tic Tac Toe</title>
+    <title>Tic-Tac-Toe Game</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <div class="container">
-      <h1>Tic Tac Toe</h1>
-      <div id="game-container" class="game-container">
-        <span data-index="0-0" class="cell"></span>
-        <span data-index="0-1" class="cell"></span>
-        <span data-index="0-2" class="cell"></span>
-        <span data-index="1-0" class="cell"></span>
-        <span data-index="1-1" class="cell"></span>
-        <span data-index="1-2" class="cell"></span>
-        <span data-index="2-0" class="cell"></span>
-        <span data-index="2-1" class="cell"></span>
-        <span data-index="2-2" class="cell"></span>
-      </div>
-      <button id="reset" class="reset">Reset</button>
-      <span id="won" class="won"></span>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
     </div>
+    <main>
+      <h1>Tic Tac Toe</h1>
+      <div class="container">
+        <div class="game">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+      <button id="reset-btn">Reset Game</button>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

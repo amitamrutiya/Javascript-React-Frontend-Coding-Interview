@@ -1,112 +1,91 @@
-const gameContainer = document.getElementById("game-container");
-const reset = document.getElementById("reset");
-let hash = {};
-let chance = true;
-let allFilled = 0;
+let boxes = document.querySelectorAll(".box");
+let resetBtn = document.querySelector("#reset-btn");
+let newGameBtn = document.querySelector("#new-btn");
+let msgContainer = document.querySelector(".msg-container");
+let msg = document.querySelector("#msg");
 
-gameContainer.addEventListener("click", function (e) {
-  if (e.target.dataset.index) {
-    if (!hash[e.target.dataset.index]) {
-      if (chance) {
-        hash[e.target.dataset.index] = "X";
-        e.target.classList.add("cell-withX");
-      } else {
-        hash[e.target.dataset.index] = "O";
-        e.target.classList.add("cell-withO");
-      }
+let turnO = true; //playerX, playerO
+let count = 0; //To Track Draw
 
-      chance = !chance;
-      allFilled++;
+const winPatterns = [
+  [0, 1, 2],
+  [0, 3, 6],
+  [0, 4, 8],
+  [1, 4, 7],
+  [2, 5, 8],
+  [2, 4, 6],
+  [3, 4, 5],
+  [6, 7, 8],
+];
 
-      let result = checkWin();
-      if (allFilled == 9 || result.includes("Win")) {
-        document.getElementById("won").textContent = result;
-        gameContainer.style.pointerEvents = "none";
-      }
-    }
-  }
-});
+const resetGame = () => {
+  turnO = true;
+  count = 0;
+  enableBoxes();
+  msgContainer.classList.add("hide");
+};
 
-reset.addEventListener("click", function (e) {
-  const cells = document.querySelectorAll(".cell");
-
-  cells.forEach((val) => {
-    if (val.classList.contains("cell-withX")) {
-      val.classList.remove("cell-withX");
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    if (turnO) {
+      //playerO
+      box.innerText = "O";
+      turnO = false;
     } else {
-      val.classList.remove("cell-withO");
+      //playerX
+      box.innerText = "X";
+      turnO = true;
+    }
+    box.disabled = true;
+    count++;
+
+    let isWinner = checkWinner();
+
+    if (count === 9 && !isWinner) {
+      gameDraw();
     }
   });
-
-  hash = {};
-  allFilled = 0;
-  chance = true;
-  document.getElementById("won").textContent = "";
-  gameContainer.style.pointerEvents = "auto";
 });
 
-function checkWin() {
-  //row
-  for (let i = 0; i < 3; i++) {
-    let set = new Set();
-    let player = "";
-    for (let j = 0; j < 3; j++) {
-      let key = `${i}-${j}`;
-      set.add(hash[key]);
-      player = hash[key];
+const gameDraw = () => {
+  msg.innerText = `Game was a Draw.`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
+};
+
+const disableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = true;
+  }
+};
+
+const enableBoxes = () => {
+  for (let box of boxes) {
+    box.disabled = false;
+    box.innerText = "";
+  }
+};
+
+const showWinner = (winner) => {
+  msg.innerText = `Congratulations, Winner is ${winner}`;
+  msgContainer.classList.remove("hide");
+  disableBoxes();
+};
+
+const checkWinner = () => {
+  for (let pattern of winPatterns) {
+    let pos1Val = boxes[pattern[0]].innerText;
+    let pos2Val = boxes[pattern[1]].innerText;
+    let pos3Val = boxes[pattern[2]].innerText;
+
+    if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+      if (pos1Val === pos2Val && pos2Val === pos3Val) {
+        showWinner(pos1Val);
+        return true;
+      }
     }
-
-    if (set.size == 1 && player) {
-      return `Player ${player} Win`;
-    }
   }
+};
 
-  //col
-  for (let i = 0; i < 3; j++) {
-    let set = new Set();
-    let player = "";
-    for (let j = 0; j < 3; i++) {
-      let key = `${j}-${i}`;
-      set.add(hash[key]);
-      player = hash[key];
-    }
-    console.log(set, player);
-    if (set.size == 1 && player) {
-      return `Player ${player} Win`;
-    }
-  }
-
-  // diagonal
-  let i = 0,
-    j = 0;
-  let set = new Set();
-  let player = "";
-  while (i < 3 && j < 3) {
-    let key = `${i}-${j}`;
-    set.add(hash[key]);
-    player = hash[key];
-    i++;
-    j++;
-  }
-
-  if (set.size == 1 && player) {
-    return `Player ${player} Win`;
-  }
-
-  // anti-daiagonal
-  (i = 0), (j = 2);
-  set.clear();
-  while (i < 3 && j >= 0) {
-    let key = `${i}-${j}`;
-    set.add(hash[key]);
-    player = hash[key];
-    i++;
-    j--;
-  }
-
-  if (set.size == 1 && player) {
-    return `Player ${player} Win`;
-  }
-
-  return "Match draw";
-}
+newGameBtn.addEventListener("click", resetGame);
+resetBtn.addEventListener("click", resetGame);
